@@ -1,0 +1,53 @@
+erDiagram
+    alumnos ||--|{ inscripciones : "tiene"
+    inscripciones }|--|| grupos : "pertenece a"
+    grupos }|--|| grados : "pertenece a"
+    grados ||--|{ grados_materias : "tiene"
+    materias ||--|{ grados_materias : "pertenece a"
+    maestros ||--|{ grados_materias : "imparte"
+    
+    alumnos {
+        INT id PK
+        VARCHAR(100) nombre "NN"
+        INT edad "N"
+        VARCHAR(150) email "NN"
+        DATE fecha_ingreso 
+    }
+    
+    %% Coralejo 
+    materias {
+       INT id PK
+       VARCHAR(50) nombre 
+    }
+
+    %% Cruz 
+    grupos {
+        INT id PK
+        VARCHAR(50) nombre "NN"
+        INT id_grado FK
+    }
+
+    %% Cristian 
+    inscripciones {
+        INT id_alumno PK "NN"
+        INT id_grupo PK "NN"
+    }
+
+    %%Daniel
+    grados{
+        INT id PK
+        VARCHAR(50) nombre "NN"
+    }
+ 
+    %% rubi
+    maestros {
+        INT ID PK
+        VARCHAR(50) nombre "NN"
+        VARCHAR(50) cedula UK "NN"
+    }    
+
+    grados_materias{
+        int id_grado pk "NN" 
+        int  id_materia pk "NN"
+        int  id_maestro "N"
+    }

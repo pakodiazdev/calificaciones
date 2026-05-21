@@ -1,0 +1,15 @@
+{
+  "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.enable": {
+    "mermaid": false
+  },
+  "[mermaid]": {
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.wordBasedSuggestions": "off"
+  }
+}
